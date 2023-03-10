@@ -153,7 +153,7 @@ const readData = () => {
 
 const insertDataTotable = (dataArray) => {
 
-    for(i=0;i<dataArray.length;i++) {
+    for(let i=0;i<dataArray.length;i++) {
      let table=document.getElementById('StudentTable').getElementsByTagName('tbody')[0];
      let row=table.insertRow(table.length);
      let cell1=row.insertCell(0);
