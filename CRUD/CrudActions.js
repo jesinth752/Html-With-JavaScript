@@ -2,7 +2,7 @@
 let selectrow=null;
 let name=document.getElementById('name');
 let set=0,setph=0,setc=0;
-ClearAllValues = () => {
+const ClearAllValues = () => {
     
     document.getElementById('name').value="";
     document.getElementById('phno').value="";
@@ -12,14 +12,14 @@ ClearAllValues = () => {
    
 
 }
-valiadd=()=>
+const valiadd=()=>
 {
     document.getElementById('Emsg').style.display="none";
     document.getElementById('address').style.border="2px solid #04AA6D";
     
 
 }
-validate=(v)=>
+const validate=(v)=>
 { 
     document.getElementById('Emsg').style.display="none";
     console.log("validatename");
@@ -64,7 +64,7 @@ validate=(v)=>
     }
     
 }
-validateph=(v)=>
+const validateph=(v)=>
 { 
     document.getElementById('Emsg').style.display="none";
     console.log("validateph");
@@ -91,7 +91,7 @@ validateph=(v)=>
 }
 
 
-AddValue = () => {
+const AddValue = () => {
 
     let dataArray=readData();
     if(selectrow==null) 
@@ -139,7 +139,7 @@ AddValue = () => {
    
 }
 
-readData = () => {
+const readData = () => {
     let data={};
     let dataArray = [];
     data['name'] = document.getElementById('name').value;
@@ -151,7 +151,7 @@ readData = () => {
    
 }
 
-insertDataTotable = (dataArray) => {
+const insertDataTotable = (dataArray) => {
 
     for(i=0;i<dataArray.length;i++) {
      let table=document.getElementById('StudentTable').getElementsByTagName('tbody')[0];
@@ -170,7 +170,7 @@ insertDataTotable = (dataArray) => {
     }
 }
 
-Edit=(td)=>{
+const Edit=(td)=>{
 
     selectrow=td.parentElement.parentElement;
     document.getElementById("name").value=selectrow.cells[0].innerHTML;
@@ -179,7 +179,7 @@ Edit=(td)=>{
     document.getElementById("address").value=selectrow.cells[3].innerHTML;
          
 }
-DeleteRecord=(td)=>{
+const DeleteRecord=(td)=>{
    selectrow=td.parentElement.parentElement;
    let table=document.getElementById('StudentTable');
    table.deleteRow(selectrow.rowIndex);
@@ -187,7 +187,7 @@ DeleteRecord=(td)=>{
 
    
 }
-updateTable = (dataArray) =>
+const updateTable = (dataArray) =>
 {
     for(i=0; i<dataArray.length; i++)
     {
