@@ -189,7 +189,7 @@ const DeleteRecord=(td)=>{
 }
 const updateTable = (dataArray) =>
 {
-    for(i=0; i<dataArray.length; i++)
+    for(let i=0; i<dataArray.length; i++)
     {
 
   selectrow.cells[0].innerHTML= dataArray[i].name;
