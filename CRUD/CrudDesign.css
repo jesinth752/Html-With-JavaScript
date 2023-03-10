@@ -191,14 +191,13 @@ border:1px yellow solid;
     width: 30%;
     height: 40px;
     background-color: black;
-    display: flex;
+    display:none;
     align-items: center;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
     position: absolute;
     right: 0;
-    display: none;
-    transition-delay: 5s;
+   
     
 }
 .erroricon
