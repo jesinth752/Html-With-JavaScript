@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CrudDesign.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="CrudActions.js" > </script>
+
+    <title>CRUD -Creating Read Update Delete</title>
+</head>
+<body>
+    <div class="ErrorMessage" id="Emsg">
+        
+        <div class="erroricon">!</div>  
+    
+    <div class="alertMessage" id="alertmsg">
+        <div id="alertmsg"></div>
+    </div>
+
+    </div>
+    <div class="Header"> 
+    CRUD Web Application
+    </div>
+    <div class="content">
+        <div class="form">
+            <input type="text" placeholder="Your Name" id="name" class="input" onkeyup="validate(this)">
+            <input type="text" placeholder="Phone Number" id="phno" class="input" onkeyup="validateph(this)">
+            <input type="date" id="city" class="input"  onkeyup="validate(this)">
+            <textarea type="text" rows="5" cols="10" placeholder="Address" id="address" onkeyup="valiadd()"></textarea>
+                <div class="buttons">
+                    <input type="submit" value="Add" onclick="AddValue()">
+                    <input type="reset" value="Reset" onclick="ClearAllValues()">
+                </div>
+        </div>
+
+        <div class="table">
+            <table class="list" id="StudentTable">
+               
+                    <thead>
+                        <tr>
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                    <th>Date</th>
+                    <th>Address</th>
+                    <th>Actions</th>
+                        </tr>
+                    </thead>
+              
+                <tbody>
+
+                </tbody>
+               
+            </table>
+            
+                    
+        </div>
+    </div>
+    
+</body>
+</html>
